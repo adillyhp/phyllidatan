@@ -1,0 +1,2034 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Beth+Ellen&family=BioRhyme:wght@200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Croissant+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+      transition: all 0.3s ease;
+}
+
+/* :root {
+    --main-col: #3F3B30;
+    --sec-col: #D9CDBF;
+    --acc-col1:#F2E8DF;
+} */
+
+body{
+    background-color: var(--acc-col1);
+    font-family: "Afacad", sans-serif;
+     line-height: 1.5;
+    font-weight: 400;
+    cursor: default;
+    
+}
+
+h1{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    letter-spacing: 0.35rem;
+    font-weight: 600;
+}
+
+h2{
+    font-family: "BioRhyme", serif;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/*== NAVIGATION ==*/
+
+nav {
+     font-family: "Cormorant Garamond", serif;
+    letter-spacing: 0.35rem;
+    font-weight: 600;
+
+     font-size: 0.775rem;
+     color: var(--acc-col1);
+
+
+     background-color: white;
+     padding: 0.9rem 0;
+     display: flex;
+    top: 0;
+
+    z-index: 99999;
+
+     position: sticky;
+     width: 100%;
+     top: 0;
+}
+
+nav ul {
+    width: 90vw;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav li a:link, nav li a:visited {
+    color: var(--acc-col1);
+    text-decoration: none;
+    padding: 0.55rem;
+    margin: 0.5rem;
+
+    transition: all 0.3s ease;
+
+}
+
+nav li a:hover{
+    scale: 1.1;
+}
+
+nav li a:hover, nav li a[href="#"] {
+    background-color: var(--acc-col1);
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--acc-col1);
+    
+
+}
+
+nav li#logo{
+    margin-right: auto;
+      font-family: "Croissant One", serif;
+      letter-spacing: 0.15rem;
+
+}
+
+.btn{
+    font-family:  "BioRhyme", serif;
+    margin: 1rem 0 0 0;
+    border: 1px solid var(--main-col);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn:link, .btn:visited{
+    text-decoration: none;
+    color: black;
+}
+
+/* this is for logo (to hide the text at the logo) */
+
+nav a {
+    display: inline-block;
+}
+
+nav li{
+    margin-left: 1.25rem;
+}
+
+.nav-toggle, .hamburger {
+    display: none;
+}
+
+/*--begin creating hamburger icon.
+THIS IS THE 3 LINE MENU THING--*/ 
+.hamburger span, .hamburger span::before, .hamburger span::after{
+    display: block;
+    position: absolute;
+    width: 1.44rem;
+    height: 2px;
+    background: black;
+    border-radius: 2px;
+    transition: transform .4s;
+}
+
+.hamburger span::before {
+    content: '';
+    margin-top: -7px;
+}
+
+.hamburger span::after {
+    content: '';
+    margin-top: 7px;
+}
+/*--end creating hamburger icon--*/
+
+/* DESKTOP */
+
+/* Insert, or adjust CSS styles specific only for laptops/computers. 
+The CSS styles here will be very similar to those found in last week’s exercise  */
+/* @media screen and (768px <= width < 1024px) { */
+/* @media screen and (min-width: 1024px) { */
+
+ @media screen and (min-width: 768px) {
+
+.mobile{
+                display:none;
+            }
+
+/* footer */
+
+footer{
+
+        /* margin-top: 2.448rem; */
+        margin: 0 auto;
+        padding: 2rem 9.5rem 3rem 9.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: top;
+        border-top: 0.5px solid black;
+    
+        
+    
+        & .footer-content{
+           
+             text-align: center;
+
+            display: grid;
+            grid-template-rows: auto 1fr auto; 
+          
+            margin: 0;
+            grid-template-areas: 
+            "h1 h1 h1"
+            "contact contact contact"
+            "copyright copyright copyright";
+
+            & h1{
+                grid-area: h1;
+            }
+
+            & .footer-contact{
+                grid-area: contact;
+            }
+            
+            & .copyright{
+                grid-area: copyright;
+                font-size: 0.775rem;
+                margin-top: 3rem;
+          
+            }
+
+            & .icon{
+                width: 2rem;
+                margin: 1rem 0.5rem 0 0;
+            }
+
+           
+            
+
+        }
+
+
+     & .footer-form{
+        
+        & p{
+            border: 1px solid var(--acc-col1);
+            margin: 1rem 0 0 0;
+            padding: 0.5rem 10rem 0.5rem 0.5rem;
+            font-size: 0.775rem;
+        }
+            
+
+        & h2{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.35rem;
+        font-weight: 600;
+        }
+
+        & .btn{
+        border: 1px solid var(--acc-col1);
+        padding: 0.5rem;
+         font-family:  "BioRhyme", serif;
+         margin: 1rem 0 0 0;
+        font-size: 0.8rem;
+         font-weight: 700;
+        float: right;
+    
+        }
+    }
+    }
+
+footer .footer-form .btn:hover {
+    background-color: var(--acc-col1);
+    color: var(--main-col);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* disclaimer */
+
+.disclaimer
+{
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* index page */
+
+#index{
+    display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [about-start] auto [works-start] auto [footer-start] auto;
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "about about about"
+    "works works works"
+    "footer footer footer";
+
+
+    &nav{
+        grid-area: nav;
+    }
+
+    
+     & header {
+        grid-area: header;
+        margin: 3rem 6rem;
+        
+    & h1{
+    font-family: "Beth Ellen", cursive;
+    margin: 10rem 0 1.5rem 0;
+    font-size: 10vw;
+    text-align: left;
+    }
+
+    & img{
+        float: right;
+        width: 60vw;
+       
+    }
+
+    }
+
+    & .about{
+        grid-area: about;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 65vw;
+        margin: 4rem auto 0;
+        padding: 7rem 0.2rem;
+        border-top: 0.5px solid black;
+         border-bottom: 0.5px solid black;
+
+        & img{
+            width: 20vw;
+            align-self: flex-start;
+        }
+
+
+        & p{
+            margin: 1rem 0 1rem 0;
+        }
+
+        & .btn {
+        border: 0.5px solid black;
+        }
+
+        & .btn:hover{
+           background-color: var(--main-col);
+           color: var(--acc-col1);
+           border-radius: 0.5rem;
+           cursor: pointer;
+        }
+    }
+
+
+
+    & .works{
+        grid-area: works;
+        width: 69vw;
+        margin: 2rem auto;
+
+       display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-bottom: 4rem;
+
+       & h1{
+        text-align: center; 
+        margin: 3rem 0 1.5rem 0;
+       } 
+       
+       & p{
+        font-size: 0.775rem;
+       }
+
+       & .work-cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: top;
+        margin: 0 0 1.5rem 0;
+
+        & img{
+            width: 100%;
+             object-fit: cover;
+             border: 1px solid var(--main-col);
+        }
+
+        & h2{
+         font-size: 1.1rem;
+         line-height: 1.3;
+         margin: 0.1rem 0 0.15rem 0;
+        }
+
+       }
+
+       & .work-card{
+        border-right: 1px solid var(--main-col);
+        padding: 0 2rem;
+        margin: 0 auto;
+        
+       }
+
+       & .work-card-last{
+        padding: 0 2rem;
+        margin: 0 auto;
+       }
+
+       & .work-card-img:hover{
+        rotate: 2deg;
+        scale: 1.03;
+        border-radius: 0.5rem;
+       }
+
+       & .btn {
+        display: block; 
+
+        width: fit-content;
+        text-align: center;
+        border: 0.5px solid black;
+    }
+
+       & .btn:hover{
+           background-color: var(--main-col);
+           color: var(--acc-col1);
+           border-radius: 0.5rem;
+           cursor: pointer;
+        }
+    }
+
+     & footer{
+        grid-area: footer;
+
+
+    }
+
+}
+
+/* about page*/
+
+#about{
+ display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] auto [footer-start] auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        width: 43vw;
+        text-align: center;
+        margin: 0 auto;
+        padding: 3rem 0 1rem 0;
+    
+        & h1{
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    & main{
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        width: 75vw;
+        
+        & .education, .software{
+            padding: 3rem;
+            margin: 3rem 0 0 0;
+        }
+
+        & .schools{
+            border-left: 0.5px solid black;
+            padding-left: 1.5rem;
+        }
+
+         & img{
+            width: 30vw;
+            position: sticky;
+            top: 4rem;
+         }
+
+    }
+
+    
+
+     & footer{
+        grid-area: footer;
+    }
+}
+
+/* works page */
+
+#works{
+ display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] auto [footer-start] auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        margin: 3rem 0 0 0;
+        text-align: center;
+
+        & .btn:hover{
+           background-color: var(--main-col);
+           color: var(--acc-col1);
+           border-radius: 0.5rem;
+           cursor: pointer;
+        }
+    }
+
+    & main {
+     grid-area: main;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+    gap: 1rem;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+
+    & img{
+        width: 100%;
+        height: 100%;
+         object-fit: cover;
+         display: block;
+         border: 1px solid var(--main-col);
+          transition: all 0.3s ease;
+  
+    }
+
+    
+
+    & .text{
+       
+     position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 1rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    & h2{
+        font-size: 1rem;
+         line-height: 1.3;
+         margin: 0.1rem 0 0.15rem 0;
+    }
+
+    & p{
+        font-size: 0.7rem;
+    }
+       
+    }
+
+      div{
+ position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+    & a{
+         display: block;
+    width: 100%;
+    height: 100%;
+    }
+    }
+
+
+div:hover{
+    & img{
+        filter: brightness(30%);   
+          border-radius: 1rem;
+    }
+    & .text{
+        opacity: 1;
+    }
+
+cursor: pointer;
+
+}
+    }
+
+
+    & footer{
+        grid-area: footer;
+    }
+    }
+
+
+   
+
+/* contact page */
+
+#contact{
+    min-height: 100vh;
+ display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] 1fr [footer-start] auto;
+     grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        text-align: center;
+        margin: 3rem 0 0 0
+    }
+
+    & main{
+    grid-area: main;
+      margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    & .footer-contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+     & .icon{
+                width: 2rem;
+                margin: 1rem 0.5rem 0 0;
+                transition: all 0.3s ease;
+            }
+
+      & .form{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--sec-col);
+       
+        padding: 2rem 3rem;
+        margin: 2rem 0;
+
+        & p{
+            border: 1px solid var(--main-col);
+            margin: 1rem 0 0 0;
+            padding: 0.5rem 10rem 0.5rem 0.5rem;
+            font-size: 0.775rem;
+        }
+            
+
+        & h2{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.35rem;
+        font-weight: 600;
+        }
+
+        & .btn{
+        border: 1px solid var(--main-col);
+        padding: 0.5rem;
+         font-family:  "BioRhyme", serif;
+         margin: 1rem 0 0 0;
+        font-size: 0.8rem;
+         font-weight: 700;
+         align-self: flex-end;
+        
+        }
+
+         & .btn:hover {
+    background-color: var(--main-col);
+    color: var(--acc-col1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+      }
+
+
+    }
+
+    & footer{
+        grid-area: footer;
+        padding: 1rem;
+
+        & .copyright{
+            text-align: center;
+            margin: 0 auto;
+            font-size: 0.775rem;
+        }
+    }
+}
+
+/* indiv work VER1 */
+
+#indiv-work1{
+    display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-img-start] auto [main-start] auto [footer-start] auto;
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main-img main-img main-img"
+    "main main main"
+    "footer footer footer";
+
+     & h2{
+            font-family: "Afacad", sans-serif;
+        }
+
+         & .category{
+         margin: 1rem 0 1rem 0;
+        border: 0.5px solid black;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-align: center;
+
+        display: inline-block;
+         }
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        width: 45vw;
+        margin: 3rem 0rem 3rem 3rem;
+
+        & h1{
+          font-family: "BioRhyme", serif;
+          letter-spacing: 0rem;
+        }
+
+        & h2{
+            font-size: 1.2rem;
+        }
+
+        & .category-div{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+             flex-wrap: wrap; 
+        }
+
+
+        }
+    
+
+     & .main-img{
+        grid-area: main-img;
+            width: 100%;
+            transition: all 0.3s ease;
+
+            & .main-img:hover{
+        cursor: pointer;
+        }
+
+        }
+
+
+    & main{
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+         gap: 8rem;
+        justify-content: center;
+        margin: 3rem 0 0 0;
+
+        /* background-color: turquoise; */
+
+
+        & h2{
+         margin: 0 0 1rem 0 ;    
+            }
+
+        & .main-content{
+            display: flex;
+            flex-direction: column;
+            align-items: top;
+            margin-bottom: 4rem;
+        }
+
+            & img{
+                width: 35vw;
+            }
+
+            & .main-content-text{
+                width: 30vw;
+            }
+
+            & .tools{
+            margin-top: auto;
+            }
+
+            .category{
+    margin: 0rem 0.5rem 0 0;
+    }
+
+        }
+        
+
+     &footer{
+        grid-area: footer;
+    }
+
+        }
+    
+
+
+        /* indiv work VER2 */
+
+#indiv-work2{
+    display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] auto [footer-start] auto;
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+     & h2{
+            font-family: "Afacad", sans-serif;
+        }
+
+         & .category{
+         margin: 1rem 0 1rem 0;
+        border: 0.5px solid black;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-align: center;
+
+        display: inline-block;
+         }
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        width: 45vw;
+        margin: 3rem 0rem 3rem 3rem;
+
+        & h1{
+          font-family: "BioRhyme", serif;
+          letter-spacing: 0rem;
+        }
+
+        & h2{
+            font-size: 1.2rem;
+        }
+
+        & .category-div{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+             flex-wrap: wrap; 
+        }
+
+        }
+
+
+    & main{
+        grid-area: main;
+        display: block;
+        margin: 0rem 3rem 3rem 3rem;
+
+         & .main-imgs {
+            width: 100vw; 
+            max-width: 100%; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1vw;
+            overflow-x: hidden; 
+            margin: 0 0 3rem 0;
+        }
+
+      & img {
+            width: 100%; 
+            object-fit: cover;
+            display: block;
+            border: 1px solid var(--main-col);
+        }
+  
+        & .transparent{
+    border: none;}
+
+        & .main-img {
+            flex: 1; 
+            min-width: 0; 
+            overflow: hidden; 
+        }
+
+      
+    
+
+     & .main-img:hover{
+        cursor: default;
+        }
+
+        & p{
+            margin: 0 0 2rem 0;
+        }
+    
+
+        .category{
+    margin: 1rem 0.5rem 0 0;
+    }
+
+    & figure{
+        margin: 0 0 1.5rem 0;
+    }
+
+    & figcaption{
+        font-size: 0.8rem;
+        text-align: right;
+        margin-top: 0.3rem;
+        font-style: italic;
+}
+    
+ }
+ 
+ & footer{
+        grid-area: footer;
+    }
+}
+
+/* name posters */
+#name-posters{
+    display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] auto [main-content-start] auto [tools-start] auto [footer-start] auto;
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "main-content main-content main-content"
+    "footer footer footer";
+
+     & h2{
+            font-family: "Afacad", sans-serif;
+        }
+
+         & .category{
+         margin: 1rem 0 1rem 0;
+        border: 0.5px solid black;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-align: center;
+
+        display: inline-block;
+         }
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        width: 45vw;
+        margin: 3rem 0rem 3rem 3rem;
+
+        & h1{
+          font-family: "BioRhyme", serif;
+          letter-spacing: 0rem;
+        }
+
+        & h2{
+            font-size: 1.2rem;
+        }
+
+        & .category-div{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+             flex-wrap: wrap; 
+        }
+
+        }
+
+
+    & main{
+        grid-area: main;
+        display: block;
+        margin: 0rem 3rem 3rem 3rem;
+
+         & .main-imgs {
+            width: 100vw; 
+            max-width: 100%; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1vw;
+            overflow-x: hidden; 
+            margin: 0 0 3rem 0;
+        }
+
+      & img {
+            width: 100%; 
+            object-fit: cover;
+            display: block;
+            border: 1px solid var(--main-col);
+        }
+    }
+
+    & .main-content{
+    grid-area: main-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 3rem 3rem 3rem;
+
+    & .main-text{
+        display: flex;
+        flex-direction: row;
+         gap: 2rem;
+        
+    }
+}
+
+     & footer{
+        grid-area: footer;
+    }    
+
+    
+ }
+}
+
+/* works flex div */
+.worksflexdiv {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem auto 0.3rem auto;
+}
+
+.worksflexdiv img {
+    flex: 1;
+    min-width: 0;
+    height: auto;
+}
+
+.figcaption-worksflexdiv{
+    font-size: 0.8rem;
+        text-align: right;
+        font-style: italic;
+}
+
+
+/* MOBILE */
+ /* Insert, or adjust CSS styles specific only for mobile phones */
+@media screen and (max-width: 767px) {
+
+
+.desktop{
+    display: none;
+}
+
+  .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 1.44rem;
+    }
+
+    /* nav styles specific only when in mobile view */
+    nav ul {
+        position: absolute; /*position is absolute so that menu is taken out of the normal layout for it to open and close without affecting layout */
+        top: 100%;
+        left: 0;
+        background-color: inherit;
+        flex-direction: column;
+        overflow: hidden;
+        width: 100vw;
+        align-items: start;
+        justify-content: start;
+        max-height: 0;
+        transition: max-height 0.4s ease-in; 
+        
+    }
+
+    nav li {
+       padding: .402rem 1.44rem;
+    }
+
+    .nav-toggle:checked ~ .nav-menu{
+        max-height: 100vh; 
+    }
+
+    .nav-toggle:checked ~ .hamburger span::before {
+        transform: rotate(45deg);
+        margin-top: 0;
+    }
+
+    .nav-toggle:checked ~ .hamburger span {
+        opacity: 1;
+        background: transparent;
+    }
+
+    .nav-toggle:checked ~ .hamburger span::after {
+        transform: rotate(-45deg);
+        margin-top: 0;
+    }
+
+/* MOBILE footer */
+
+footer{
+  background-color: var(--main-col);
+        color: var(--acc-col1);
+        padding: 3rem;
+        width: 70vw;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        border-top: 0.5px solid black;
+    
+        & .footer-content{
+            
+            text-align: center;
+            
+            & h1{
+               font-size: 2.5rem;
+               margin-bottom: 1.5rem;
+            }
+
+            
+
+            & .icon{
+                width: 2rem;
+                margin: 1rem 0.5rem 0 0;
+            }
+
+        }
+
+     & .footer-form{
+        
+        & p{
+            border: 1px solid var(--acc-col1);
+            margin: 1rem 0 0 0;
+            padding: 0.5rem 10rem 0.5rem 0.5rem;
+            font-size: 0.775rem;
+        }
+         
+
+        & h2{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.35rem;
+        font-weight: 600;
+        }
+
+        & .btn{
+        border: 1px solid var(--acc-col1);
+        padding: 0.5rem;
+         font-family:  "BioRhyme", serif;
+         margin: 1rem 0 0 0;
+        font-size: 0.8rem;
+         font-weight: 700;
+        float: right;
+        
+        }
+    }
+
+    .copyright{
+                font-size: 0.775rem;
+          
+            }
+    }
+
+
+    footer .footer-form .btn:hover {
+    background-color: var(--acc-col1);
+    color: var(--main-col);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* MOBILE disclaimer */
+
+.disclaimer
+{
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* MOBILE index page */
+
+#index{
+    display: grid;
+    grid-template-rows: [nav-start] auto [header-start] auto [about-start] auto [works-start] auto [footer-start] auto;
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "about about about"
+    "works works works"
+    "footer footer footer";
+
+    &nav{
+        grid-area: nav;
+    }
+
+    
+     & header {
+        grid-area: header;
+        margin: 0 auto;
+        width: 80vw;
+        text-align: center;
+        
+    & h1{
+    font-family: "Beth Ellen", cursive;
+    margin: 3rem 0 1.5rem 0;
+    font-size: 11vw;
+
+    }
+
+    & h2{
+        font-size: 1.4rem;
+        order: 1;
+    }
+
+    & p{
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    & img{
+        width:75vw;
+        margin: 3rem 0 ;
+    }
+
+    }
+
+    & .about{
+        grid-area: about;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        background-color: var(--sec-col);
+        width: 85vw;
+          margin: 4rem auto 0;
+         padding: 4rem 2rem 4rem;
+        border-top: 0.5px solid black;
+         border-bottom: 0.5px solid black;
+
+
+        & img.mobile{
+       
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+        align-self: center;
+        order: 2;
+
+    }
+
+        
+        }
+
+       
+
+        & h1{
+            font-size: 2.5rem;
+            margin: none;
+        }
+    
+
+         & .btn {
+        display: block; 
+        margin: 2rem auto 0 auto;
+
+        width: fit-content;
+        text-align: center;
+        border: 0.5px solid black;
+        
+    }
+
+        & p{
+        
+            margin: 1rem 0 1rem 0;
+            font-size: 0.9rem;
+          
+        }
+
+
+        & .btn:hover{
+           background-color: var(--main-col);
+           color: var(--acc-col1);
+           border-radius: 0.5rem;
+           cursor: pointer;
+        }
+
+        
+    }
+
+    & .works{
+        grid-area: works;
+        width: 69vw;
+        margin: 0 auto;
+
+       display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-bottom: 3rem;
+       
+      
+       & h1{
+        text-align: center; 
+        margin: 3rem 0 1.5rem 0;
+       } 
+       
+       & p{
+        font-size: 0.775rem;
+       }
+
+       & .work-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: top;
+        margin: 0 0 1.5rem 0;
+        /* gap: 3rem; */
+
+        & img{
+            width: 100%;
+             object-fit: cover;
+             border: 1px solid var(--main-col);
+        }
+
+        & h2{
+         font-size: 1.1rem;
+         line-height: 1.3;
+         margin: 0.1rem 0 0.15rem 0;
+        }
+
+       }
+
+       & .work-card{
+      
+        padding: 0 2rem;
+        margin: 0 0 2rem 0;
+        
+       }
+
+       & .work-card-last{
+        padding: 0 2rem;
+        margin: 0 auto;
+       }
+
+       & .work-card-img:hover{
+        rotate: 2deg;
+        scale: 1.03;
+        border-radius: 0.5rem;
+       }
+
+       & .btn:hover{
+           background-color: var(--main-col);
+           color: var(--acc-col1);
+           border-radius: 0.5rem;
+           cursor: pointer;
+        }
+    }
+
+     & footer{
+        grid-area: footer;
+    }
+
+/* MOBILE about page*/
+
+#about{
+ display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] auto [footer-start] auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        width: 80vw;
+        text-align: center;
+        margin: 0 auto;
+        padding: 3rem 0 1rem 0;
+    
+        & h1{
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    & main{
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        width: 75vw;
+        
+
+        & .education, .software{
+            padding: 2.5rem;
+            margin: 3rem 0 0 0;
+
+            & h1{
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+             & h2{
+            font-size: 1.2rem;
+            }
+        }
+
+        & .schools{
+            border-left: 0.5px solid black;
+            padding-left: 1.5rem;
+
+    
+        }
+
+         & img{
+            /* display: none; */
+            width: 30vw;
+            position: sticky;
+            top: 4rem;
+         }
+
+         
+
+    }
+
+     & footer{
+        grid-area: footer;
+    }
+}
+
+/*MOBILE works page */
+
+#works{
+ display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] auto [footer-start] auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        margin: 3rem 0 0 0;
+        text-align: center;
+    }
+
+    & main {
+     grid-area: main;
+
+     
+
+    display: grid;
+
+    gap: 1rem;
+    width: 60vw;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+     & img{
+        width: 100%;
+        height: 100%;
+         object-fit: cover;
+         display: block;
+         border: 1px solid var(--main-col);
+          transition: all 0.3s ease;
+  
+    }
+
+
+
+    & .text{
+       
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    margin: 0 auto;
+    width: 80%;
+
+    opacity: 0;
+    transition: all 0.3s ease; 
+
+
+    & h2{
+        font-size: 1.1rem;
+         line-height: 1.3;
+         margin: 0.1rem 0 0.15rem 0;
+    }
+
+    & p{
+        font-size: 0.775rem;
+    }
+       
+    }
+
+    div {
+        position: relative;
+    }
+
+    div:hover{
+    & img{
+        filter: brightness(30%);   
+          border-radius: 1rem;
+    }
+    & .text{
+        opacity: 1;
+    }
+
+    cursor: pointer;
+
+}
+    }
+
+
+
+    & footer{
+        grid-area: footer;
+    }
+    }
+
+/* MOBILE contact page */
+
+#contact{
+    min-height: 100vh;
+ display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] 1fr [footer-start] auto;
+     grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        text-align: center;
+        margin: 3rem 0 0 0
+ 
+    }
+
+     & h1{
+               font-size: 2.5rem;
+             
+            }
+
+    & main{
+    grid-area: main;
+      margin: 0 auto;
+      width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    & .footer-contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+    }
+
+     & .icon{
+                width: 2rem;
+                margin: 1rem 0.5rem 0 0;
+                transition: all 0.3s ease;
+            }
+
+
+      & .form{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--sec-col);
+        padding: 2rem 3rem;
+        margin: 2rem 0;
+        
+      
+
+        & p{
+            border: 1px solid var(--main-col);
+            margin: 1rem 0 0 0;
+            padding: 0.5rem 8rem 0.5rem 0.5rem;
+            font-size: 0.775rem;
+        }
+            
+
+        & h2{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.35rem;
+        font-weight: 600;
+        }
+
+        & .btn{
+        border: 1px solid var(--main-col);
+        padding: 0.5rem;
+         font-family:  "BioRhyme", serif;
+         margin: 1rem 0 0 0;
+        font-size: 0.8rem;
+         font-weight: 700;
+         align-self: flex-end;
+        
+        }
+
+
+       & .btn:hover {
+    background-color: var(--main-col);
+    color: var(--acc-col1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+      }
+
+
+    }
+
+    & footer{
+        grid-area: footer;
+        padding: 1rem;
+
+        & .copyright{
+            text-align: center;
+            margin: 0 auto;
+            font-size: 0.775rem;
+        }
+    }
+}
+
+/* MOBILE indiv work VER1 */
+
+#indiv-work1{
+    display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-img-start] auto [main-start] auto [footer-start] auto;
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main-img main-img main-img"
+    "main main main"
+    "footer footer footer";
+
+     & h2{
+            font-family: "Afacad", sans-serif;
+        }
+
+         & .category{
+         margin: 1rem 0 1rem 0;
+        border: 0.5px solid black;
+        padding: 0.6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        text-align: center;
+
+        display: inline-block;
+         }
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        width: 80vw;
+        margin: 3rem auto;
+
+        & h1{
+          font-family: "BioRhyme", serif;
+          letter-spacing: 0rem;
+          font-size: 2rem;
+        }
+
+        & h2{
+            font-size: 0.8rem;
+        }
+
+        & .category-div{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+             flex-wrap: wrap; 
+        }
+
+
+        }
+    
+
+     & .main-img{
+        grid-area: main-img;
+            width: 100%;
+            transition: all 0.3s ease;
+
+            & .main-img:hover{
+        cursor: pointer;
+        }
+
+        }
+
+
+    & main{
+        grid-area: main;
+        display: block;
+    align-items: center;
+        margin: 1rem auto;
+
+
+        & h2{
+         margin: 1rem 0 1rem 0 ;    
+            }
+
+
+            & img{
+                width: 80vw;
+            }
+
+            & .main-content-text{
+                width: 80vw;
+            }
+
+            & .tools{
+            margin-top: auto;
+            }
+
+            .category{
+    margin: 0rem 0.5rem 0 0;
+    }
+
+        }
+        
+     &footer{
+        grid-area: footer;
+    }
+
+        }
+    
+    
+
+        /* MOBILE indiv work VER2 */
+
+#indiv-work2{
+    display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] auto [footer-start] auto;
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+     & h2{
+            font-family: "Afacad", sans-serif;
+        }
+
+         & .category{
+         margin: 1rem 0 1rem 0;
+        border: 0.5px solid black;
+        padding: 0.6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        text-align: center;
+
+        display: inline-block;
+         }
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        width: 80vw;
+        margin: 3rem auto;
+
+        & h1{
+          font-family: "BioRhyme", serif;
+          letter-spacing: 0rem;
+          font-size: 2rem;
+        }
+
+        & h2{
+            font-size: 0.8rem;
+        }
+
+        & .category-div{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+             flex-wrap: wrap; 
+        }
+
+        }
+
+
+    & main{
+        grid-area: main;
+        display: block;
+        margin: 0rem 3rem 3rem 3rem;
+
+         & .main-imgs {
+            width: 100vw; 
+            max-width: 100%; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1vw;
+            overflow-x: hidden; 
+            margin: 0 0 3rem 0;
+        }
+
+      & img {
+            width: 100%; 
+            object-fit: cover;
+            display: block;
+            border: 1px solid var(--main-col);
+        }
+  
+        & .transparent{
+    border: none;}
+
+        & .main-img {
+            flex: 1; 
+            min-width: 0; 
+            overflow: hidden; 
+        }
+
+    
+
+     & .main-img:hover{
+        cursor: default;
+        }
+
+        & p{
+            margin: 0 0 2rem 0;
+        }
+    
+
+        .category{
+    margin: 1rem 0.5rem 0 0;
+    }
+
+    & figure{
+        margin: 0 0 1.5rem 0;
+    }
+
+    & figcaption{
+        font-size: 0.8rem;
+        text-align: right;
+        margin-top: 0.3rem;
+        font-style: italic;
+}
+    
+ }
+ 
+ & footer{
+        grid-area: footer;
+    }
+}
+
+/* MOBILE name posters */
+#name-posters{
+    display: grid;
+   grid-template-rows: [nav-start] auto [header-start] auto [main-start] auto [main-content-start] auto [tools-start] auto [footer-start] auto;
+    grid-template-columns: [full-start] 1fr [full-end];
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "main-content main-content main-content"
+    "footer footer footer";
+
+     & h2{
+            font-family: "Afacad", sans-serif;
+        }
+
+         & .category{
+         margin: 1rem 0 1rem 0;
+        border: 0.5px solid black;
+        padding: 0.6rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        text-align: center;
+
+        display: inline-block;
+         }
+
+    & nav{
+        grid-area: nav;
+    }
+
+    & header{
+        grid-area: header;
+        width: 80vw;
+        margin: 3rem auto;
+
+        & h1{
+          font-family: "BioRhyme", serif;
+          letter-spacing: 0rem;
+          font-size: 2rem;
+        }
+
+        & h2{
+            font-size: 0.8rem;
+        }
+
+        & .category-div{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+             flex-wrap: wrap; 
+        }
+
+        }
+
+
+    & main{
+        grid-area: main;
+        display: block;
+        margin: 0rem 3rem 3rem 3rem;
+
+         & .main-imgs {
+            width: 100vw; 
+            max-width: 100%; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1vw;
+            overflow-x: hidden; 
+            margin: 0 0 3rem 0;
+        }
+
+      & img {
+            width: 100%; 
+            object-fit: cover;
+            display: block;
+            border: 1px solid var(--main-col);
+        }
+    }
+
+    & .main-content{
+    grid-area: main-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 3rem 3rem 3rem;
+
+    & .main-text{
+        display: flex;
+        flex-direction: row;
+         gap: 2rem;
+        
+    }
+}
+
+  
+    
+
+     & footer{
+        grid-area: footer;
+    }    
+
+    
+ }
+
+}
